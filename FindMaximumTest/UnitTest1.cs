@@ -56,6 +56,12 @@ namespace FindMaximumTest
             Assert.AreEqual("Pear", result);
             Assert.Pass();
         }
+        [Test]      //TC-3.2
+        public void GivenMaxSecondString_WhenAnalysed_ShouldReturnSecondStringMax()
+        {
+            string result = findMaximum.FindMaxString("Apple", "Pear", "Banana"); ;
+            Assert.AreEqual("Pear", result);
+            Assert.Pass();
+        }
     }
 }
-
