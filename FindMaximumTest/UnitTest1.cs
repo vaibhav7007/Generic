@@ -91,5 +91,26 @@ namespace FindMaximumTest
             Assert.AreEqual(78, result);
             Assert.Pass();
         }
+        [Test]      //Generic TC-2
+        public void GivenMaxFirstFloatNum_WhenAnalysed_ShouldReturnFirstMaxNum()
+        {
+            float result = findMaxFloatGeneric.GenericMaxNumber(36.21F, 12.36F, 25.45F);
+            Assert.AreEqual(36.21F, result);
+            Assert.Pass();
+        }
+        [Test]
+        public void GivenMaxSecondFloatNum_WhenAnalysed_ShouldReturnSecondMaxNum()
+        {
+            float result = findMaxFloatGeneric.GenericMaxNumber(36.21F, 47.36F, 25.45F);
+            Assert.AreEqual(47.36F, result);
+            Assert.Pass();
+        }
+        [Test]
+        public void GivenMaxThirdFloatNum_WhenAnalysed_ShouldReturnThirdMaxNum()
+        {
+            float result = findMaxFloatGeneric.GenericMaxNumber(36.21F, 47.36F, 56.45F);
+            Assert.AreEqual(56.45F, result);
+            Assert.Pass();
+        }
     }
 }
