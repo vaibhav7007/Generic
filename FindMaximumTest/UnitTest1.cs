@@ -5,6 +5,9 @@ namespace FindMaximumTest
     public class Tests
     {
         FindMaximum findMaximum = new FindMaximum();
+        FindMaxGeneric<int> findMaxIntGeneric = new FindMaxGeneric<int>();
+        FindMaxGeneric<float> findMaxFloatGeneric = new FindMaxGeneric<float>();
+        FindMaxGeneric<string> findMaxStringGeneric = new FindMaxGeneric<string>();
 
         [Test]      //TC-1.1
         public void GivenMaxFirstNum_WhenAnalysed_ShouldReturnFirstMax()
@@ -115,22 +118,22 @@ namespace FindMaximumTest
         [Test]      //Generic-TC3
         public void GivenMaxFirstString_WhenAnalysed_ShouldReturnFirstMaxString()
         {
-            string result = findMaxStringGeneric.GenericMaxNumber("shivani", "shiva", "malhar");
-            Assert.AreEqual("shivani", result);
+            string result = findMaxStringGeneric.GenericMaxNumber("Vaibhav", "shiva", "malhar");
+            Assert.AreEqual("Vaibhav", result);
             Assert.Pass();
         }
         [Test]
         public void GivenMaxSecondString_WhenAnalysed_ShouldReturnSecondMaxString()
         {
-            string result = findMaxStringGeneric.GenericMaxNumber("shiva", "shivani", "malhar");
-            Assert.AreEqual("shivani", result);
+            string result = findMaxStringGeneric.GenericMaxNumber("shiva", "Vaibhav", "malhar");
+            Assert.AreEqual("Vaibhav", result);
             Assert.Pass();
         }
         [Test]
         public void GivenMaxThirdString_WhenAnalysed_ShouldReturnThirdMaxString()
         {
-            string result = findMaxStringGeneric.GenericMaxNumber("shiva", "malhar", "shivani");
-            Assert.AreEqual("shivani", result);
+            string result = findMaxStringGeneric.GenericMaxNumber("shiva", "malhar", "Vaibhav");
+            Assert.AreEqual("Vaibhav", result);
             Assert.Pass();
         }
     }
