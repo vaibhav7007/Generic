@@ -21,5 +21,12 @@ namespace FindMaximumTest
             Assert.AreEqual(30, result);
             Assert.Pass();
         }
+        [Test]
+        public void GivenMaxThirdNum_WhenAnalysed_ShouldReturnThirdMax()
+        {
+            int result = findMaximum.FindMaxInt(20, 30, 50);
+            Assert.AreEqual(50, result);
+            Assert.Pass();
+        }
     }
 }
