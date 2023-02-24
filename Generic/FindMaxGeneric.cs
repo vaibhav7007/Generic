@@ -56,8 +56,13 @@ namespace Generic
         public T MaxMethod()
         {
             var max = MaxValue(this.value);
-            Console.WriteLine("The max value is: " + max);
+            //Console.WriteLine("The max value is: " + max);
             return max;
+        }
+        public void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("The max value is: " + max);
         }
     }
 }

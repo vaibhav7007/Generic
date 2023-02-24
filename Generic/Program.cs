@@ -9,7 +9,7 @@ namespace Generic
         {
             Console.WriteLine("Welcome to find maximum using generics");
             Console.WriteLine("Please enter an option");
-            Console.WriteLine("1:Find maximum integer\n2:Find maximum float\n3:Find maximum string\n4:Find maximum using Generic");
+            Console.WriteLine("1:Find maximum integer\n2:Find maximum float\n3:Find maximum string\n4:Find maximum using Generic\n5:Refactor to find maximum using generic\n6:Find multiple maximum using generic\n7:");
             int option = Convert.ToInt32(Console.ReadLine());
             FindMaximum findMaximum = new FindMaximum();
             FindMaxGeneric<int> findMaxInt = new FindMaxGeneric<int>(12, 25, 30);
@@ -66,6 +66,37 @@ namespace Generic
                     }
                     FindMaxGeneric<string> findStringMax = new FindMaxGeneric<string>(str);
                     findStringMax.MaxMethod();
+                    break;
+                case 7:
+                    Console.WriteLine("Enter count of ineteger number");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    int[] numInteger = new int[num];
+                    for (int i = 0; i < num; i++)
+                    {
+                        numInteger[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    FindMaxGeneric<int> findIntegerMaximum = new FindMaxGeneric<int>(numInteger);
+                    findIntegerMaximum.PrintMaxValue();
+
+                    Console.WriteLine("Enter count of float number");
+                    int num1 = Convert.ToInt32(Console.ReadLine());
+                    float[] numbFloat = new float[num1];
+                    for (int i = 0; i < num1; i++)
+                    {
+                        numbFloat[i] = (float)Convert.ToDouble(Console.ReadLine());
+                    }
+                    FindMaxGeneric<float> findFloatMaximum = new FindMaxGeneric<float>(numbFloat);
+                    findIntegerMaximum.PrintMaxValue();
+
+                    Console.WriteLine("Enter count of string");
+                    int num2 = Convert.ToInt32(Console.ReadLine());
+                    string[] numbString = new string[num2];
+                    for (int i = 0; i < num2; i++)
+                    {
+                        numbString[i] = Console.ReadLine();
+                    }
+                    FindMaxGeneric<string> findStringMaximum = new FindMaxGeneric<string>(numbString);
+                    findStringMaximum.PrintMaxValue();
                     break;
                 default:
                     Console.WriteLine("Please enter right option");
