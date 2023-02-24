@@ -36,6 +36,37 @@ namespace Generic
                     findMaxFloat.TestMaximum();
                     findMaxString.TestMaximum();
                     break;
+                case 6:
+                    Console.WriteLine("Enter count of ineteger number");
+                    int count = Convert.ToInt32(Console.ReadLine());
+                    int[] numInt = new int[count];
+                    for (int i = 0; i < count; i++)
+                    {
+                        numInt[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    FindMaxGeneric<int> findIntMax = new FindMaxGeneric<int>(numInt);
+                    findIntMax.MaxMethod();
+
+                    Console.WriteLine("Enter count of float number");
+                    int count1 = Convert.ToInt32(Console.ReadLine());
+                    float[] numFloat = new float[count1];
+                    for (int i = 0; i < count; i++)
+                    {
+                        numFloat[i] = (float)Convert.ToDouble(Console.ReadLine());
+                    }
+                    FindMaxGeneric<float> findFloatMax = new FindMaxGeneric<float>(numFloat);
+                    findFloatMax.MaxMethod();
+
+                    Console.WriteLine("Enter count of string");
+                    int count2 = Convert.ToInt32(Console.ReadLine());
+                    string[] str = new string[count2];
+                    for (int i = 0; i < count; i++)
+                    {
+                        str[i] = Console.ReadLine();
+                    }
+                    FindMaxGeneric<string> findStringMax = new FindMaxGeneric<string>(str);
+                    findStringMax.MaxMethod();
+                    break;
                 default:
                     Console.WriteLine("Please enter right option");
                     break;
