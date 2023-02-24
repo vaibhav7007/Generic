@@ -41,5 +41,23 @@ namespace Generic
                 return thirdFloat;
             }
         }
+        public string FindMaxString(string firstString, string secondString, string thirdString)
+        {
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0)
+            {
+                Console.WriteLine("The maximum value is: " + firstString);
+                return firstString;
+            }
+            else if (secondString.CompareTo(thirdString) > 0)
+            {
+                Console.WriteLine("The maximum value is: " + secondString);
+                return secondString;
+            }
+            else
+            {
+                Console.WriteLine("The maximum value is: " + thirdString);
+                return thirdString;
+            }
+        }
     }
 }
