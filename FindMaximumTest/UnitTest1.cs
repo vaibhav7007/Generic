@@ -35,5 +35,13 @@ namespace FindMaximumTest
             Assert.AreEqual(36.21F, result);
             Assert.Pass();
         }
+        [Test]
+        public void GivenMaxSecondFloatNum_WhenAnalysed_ShouldReturnSecondMax()
+        {
+            float result = findMaximum.FindMaxFloat(36.21F, 45.36F, 25.45F);
+            Assert.AreEqual(45.36F, result);
+            Assert.Pass();
+        }
     }
 }
+
